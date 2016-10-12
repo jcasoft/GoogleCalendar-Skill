@@ -86,7 +86,7 @@ Authorize Google Calendar Skill in distro without local web browser
 
 Open the generated link in computer with browser and wait the verification code and paste
 
-     Enter verification code: 4/oxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   (Please copy the code generated, and paste it there)
+     Enter verification code: 4/oxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   
 
 
 
