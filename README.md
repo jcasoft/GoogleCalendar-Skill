@@ -30,11 +30,11 @@ Inside mycroft virtual environment
     pip install google-api-python-client apiclient oauth2client httplib2
 
 
-Now got to Mycroft third party skill directory
+Now go to Mycroft third party skill directory
 
     cd  /opt/mycroft/third_party/
 
-    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git
+    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git mycroft-googlecalendar-skill
 
 <i class="icon-cog"></i>Add 'GoogleCalendar-Skill' section in your Mycroft configuration file on:
 
