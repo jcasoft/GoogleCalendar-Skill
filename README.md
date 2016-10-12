@@ -34,7 +34,7 @@ Now got to Mycroft thord party skill directory
 
     cd  /opt/mycroft/third_party/
 
-    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git
+    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git mycroft-googlecalendar-skill
 
 <i class="icon-cog"></i>Add 'GoogleCalendar-Skill' section in your Mycroft configuration file on:
 
