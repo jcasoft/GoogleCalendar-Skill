@@ -30,11 +30,11 @@ Inside mycroft virtual environment
     pip install google-api-python-client apiclient oauth2client httplib2
 
 
-Now got to Mycroft thord party skill directory
+Now got to Mycroft third party skill directory
 
     cd  /opt/mycroft/third_party/
 
-    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git mycroft-googlecalendar-skill
+    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git
 
 <i class="icon-cog"></i>Add 'GoogleCalendar-Skill' section in your Mycroft configuration file on:
 
@@ -125,7 +125,6 @@ New Features: Add Events
 
 Currently this skill can do the following things to set events to your calendar (with some variation):
 
-- Whats my next meeting
 - Add new event tomorrow from 2:30 pm to 4:45 pm Lunch with Gianluca on Olive Garden's
 - Set compromise today from 18:30 to 21:45 pm Dinner whit Gianluca after work
 - Add new appointment from 8:30 am to 11:45 am Marketing planification
@@ -153,7 +152,8 @@ Currently this skill can do the following things to set events to your calendar 
 Bonus Features: 
 --------------------
 - When is the end of the world?
-- when is the judgment day ?
+- When is the judgment day ?
+
 
 
 
