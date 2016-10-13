@@ -145,7 +145,7 @@ Currently this skill can do the following things to set events to your calendar 
 
 > **Note:**
 
-> - For add events, you have to use hours with fractions fo 15 minutes (Like: 10:15 am , 15.45 , 20:30 )
+> - For add events, you have to use hours with fractions of 15 minutes (Like: 10:15 am , 15.45 , 20:30 )
 > - You can toggle key word with:
 > - Today, tomorrow, name of the day of the week , month and day
 > - Events, Events, Meeting, Mettings, Appointmen, Appointmens, Schedule, Scheduled, Compromise, Compromises
