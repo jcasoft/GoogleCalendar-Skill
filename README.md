@@ -38,7 +38,7 @@ Now go to Mycroft third party skill directory
 
 <i class="icon-cog"></i>Add 'GoogleCalendar-Skill' section in your Mycroft configuration file on:
 
-    /home/pi/.mycroft/mycroft.ini
+    $HOME/.mycroft/mycroft.ini
 
         [GoogleCalendarSkill]
         loginEnabled = False
@@ -104,11 +104,11 @@ Currently this skill can do the following things to get information from your ca
 
 - Whats my next meeting
 - List my appointments for today
-- List My events for tomorrow
+- List my events for tomorrow
 - List my appointments until tomorrow
 - My compromises for the Sunday
 - Whats my events for the following 5 days
-- Whats my next appointment with gianluca (New)
+- When is my appointment with gianluca (New)
 - Where is my next meeting (New)
 
 
@@ -145,6 +145,7 @@ Currently this skill can do the following things to set events to your calendar 
 
 > **Note:**
 
+> - For add events, you have to use hours with fractions fo 15 minutes (Like: 10:15 am , 15.45 , 20:30 )
 > - You can toggle key word with:
 > - Today, tomorrow, name of the day of the week , month and day
 > - Events, Events, Meeting, Mettings, Appointmen, Appointmens, Schedule, Scheduled, Compromise, Compromises
