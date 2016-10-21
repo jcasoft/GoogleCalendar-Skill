@@ -9,7 +9,6 @@
 # Go to the following link in your browser on computer with browser (this link may be different on each computer):
 # 
 # https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=992603803855-06urqkqae0trrr2dfte4vljmj8ts2om2.apps.googleusercontent.com&access_type=offline
-# https://accounts.google.com/o/oauth2/v2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&response_type=code&client_id=992603803855-06urqkqae0trrr2dfte4vljmj8ts2om2.apps.googleusercontent.com&access_type=offline
 #
 # Enter verification code: 4/oxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   (Please copy the code generated, and paste it there)
 #

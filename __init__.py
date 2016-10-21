@@ -55,8 +55,6 @@ python_out 		=  "/usr/bin/python2.7"
 third_party_skill 	= "/opt/mycroft/third_party/mycroft-googlecalendar-skill/"
 effects 		= third_party_skill + "effects/"
 
-
-
 attendees_own_Email=[]
 attendees_family_Email=[]
 attendees_work_Email=[]
@@ -350,7 +348,6 @@ class GoogleCalendarSkill(MycroftSkill):
 	"""
 
         self.load_data_files(dirname(__file__))
-
 	self.load_regex_files(join(dirname(__file__), 'regex', 'en-us'))
 
         self.emitter.on(self.name + '.google_calendar',self.google_calendar)
@@ -1184,7 +1181,7 @@ class GoogleCalendarSkill(MycroftSkill):
 		play_mp3(effects+"end_of_world.mp3")
 		time.sleep(36)
 		self.speak_dialog('EndOfWorld')
-	elif ("judgment day" in ask_word):
+	elif ("judgment day" in ask_word) or ("judgement day" in ask_word):
 		play_mp3(effects+"judgment_day.mp3")
 		time.sleep(16)
 		self.speak_dialog('JudgmentDay')
