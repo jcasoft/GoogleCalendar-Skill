@@ -25,6 +25,7 @@ Manual Method not for Mark1
     cd  /opt/mycroft/skills
     git clone https://github.com/jcasoft/GoogleCalendar-Skill.git
     workon mycroft (Only if you have installed Mycroft on Virtualenv)
+    cd GoogleCalendar-Skill
     pip install -r requirements.txt
 
 
@@ -49,9 +50,12 @@ on "GoogleCalendarSkill" section (added automatically)
 Manual Method for Mark1
 -------------------
 
+    open SSH session
+
     cd  /opt/mycroft/skills
     git clone https://github.com/jcasoft/GoogleCalendar-Skill.git
-    pip install -r requirements.txt
+    cd GoogleCalendar-Skill
+    sudo pip install -r requirements.txt
 
 
 Authorize Google Calendar for Mark1
