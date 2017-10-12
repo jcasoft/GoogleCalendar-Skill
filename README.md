@@ -12,7 +12,7 @@ Now is possible to add events with a lot of intents
 Install Using MSM (Mycroft Skill Manager)  not for Mark1
 -------------------
 
-    msm install https://github.com/jcasoft/GoogleCalendarSkill.git
+    msm install https://github.com/jcasoft/GoogleCalendar-Skill.git
 
 
 If it does not work with the MSM method try it with the manual method
@@ -23,7 +23,7 @@ Manual Method not for Mark1
 -------------------
 
     cd  /opt/mycroft/skills
-    git clone https://github.com/jcasoft/GoogleCalendarSkill.git
+    git clone https://github.com/jcasoft/GoogleCalendar-Skill.git
     workon mycroft (Only if you have installed Mycroft on Virtualenv)
     pip install -r requirements.txt
 
@@ -37,7 +37,7 @@ Authorize Google Calendar Skill in distro with local web browser, wait web brows
 
     cd  /opt/mycroft/skills
     workon mycroft
-    python GoogleCalendarSkill
+    python GoogleCalendar-Skill
 
 
 Edit your ~/.mycroft/mycroft.conf
@@ -50,7 +50,7 @@ Manual Method for Mark1
 -------------------
 
     cd  /opt/mycroft/skills
-    git clone https://github.com/jcasoft/GoogleCalendarSkill.git
+    git clone https://github.com/jcasoft/GoogleCalendar-Skill.git
     pip install -r requirements.txt
 
 
@@ -64,7 +64,7 @@ Authorize GoogleCalendarSkill in Mark1 without local web browser
     From your command line go to mycroft skills folder
 
     cd  /opt/mycroft/skills
-    python GoogleCalendarSkill --noauth_local_webserver
+    python GoogleCalendar-Skill --noauth_local_webserver
 
 Open the generated link in computer with browser and wait the verification code and paste
 
