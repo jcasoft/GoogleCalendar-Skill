@@ -1,101 +1,101 @@
-**GoogleCalendar-Skill with add events**
+**GoogleCalendarSkill with add events **
 ===================
 
-
+For Mycroft
 An skill to use with Mycroft which allow to interact with google calendar.
 Now is possible to add events with a lot of intents
 
 ----------
 
 
-Installation
+
+Install Using MSM (Mycroft Skill Manager)  not for Mark1
 -------------------
-Is necesary to make this procedure two times
 
-outside mycroft virtual environment for python 2
-
-    pip install google-api-python-client apiclient oauth2client httplib2
-	
-    or 
-
-    pip2 install google-api-python-client apiclient oauth2client httplib2
+    msm install https://github.com/jcasoft/GoogleCalendarSkill.git
 
 
-Now enter inside mycroft virtual environment
+If it does not work with the MSM method try it with the manual method
+For install in Mark1 use Manual Method on Mark1
+of Manual Method not for Mark1
 
-Inside mycroft virtual environment
+Manual Method not for Mark1
+-------------------
 
-    workon mycroft
-
-    pip install google-api-python-client apiclient oauth2client httplib2
-
-
-Now go to Mycroft third party skill directory
-
-    cd  /opt/mycroft/third_party/
-
-    git clone  https://github.com/jcasoft/GoogleCalendar-Skill.git mycroft-googlecalendar-skill
-
-<i class="icon-cog"></i>Add 'GoogleCalendar-Skill' section in your Mycroft configuration file on:
-
-    $HOME/.mycroft/mycroft.ini
-
-        [GoogleCalendarSkill]
-        loginEnabled = False
-        calendar_id = 'xxxxxx@gmail.com' # For add events to your calendar
-        maxResults = 10
-        gmt = '-06:00'
-        timeZone = 'America/El_Salvador'
-        attendees_own = 'xxxxx1@gmail.com,xxxxx2@icloud.com'
-        attendees_family = 'xxxx1@yahoo.com,xxxx2@hotmail.com'
-        attendees_work = 'support.mywork@gmail.com,sales.mywork@gmail.com,info.mywork@icloud.com'
-        reminders_email = 1440  # in minutes --> 24 *60
-        reminders_popup = 10    # in minutes
-        default_duration = 2	# Default duration of appointments, in hours
-        time_format = 12h 	# Options are 12h and 24h
+    cd  /opt/mycroft/skills
+    git clone https://github.com/jcasoft/GoogleCalendarSkill.git
+    workon mycroft (Only if you have installed Mycroft on Virtualenv)
+    pip install -r requirements.txt
 
 
-> **Note:**
-
-> - The previous configuration it's necesary for add events to your calendar
-
-
-If had installed this skill previusly (delete credential file to re-create a new credential)
-
-    cd ~
-    cd .credentials
-    rm mycroft-googlecalendar-skill.json
-
+Authorize Google Calendar not for Mark1
+-------------------
 
 Authorize Google Calendar Skill in distro with local web browser, wait web browse open and select "Allow"
 
-    From your command line go to third_party folder skill
+    From your command line go to mycroft skills folder
 
-    cd /opt/mycroft/third_party
+    cd  /opt/mycroft/skills
+    workon mycroft
+    python GoogleCalendarSkill
 
-    python mycroft-googlecalendar-skill
 
+Edit your ~/.mycroft/mycroft.conf
+
+on "GoogleCalendarSkill" section (added automatically)
+
+
+
+Manual Method for Mark1
+-------------------
+
+    cd  /opt/mycroft/skills
+    git clone https://github.com/jcasoft/GoogleCalendarSkill.git
+    pip install -r requirements.txt
+
+
+Authorize Google Calendar for Mark1
+-------------------
 	
-Authorize Google Calendar Skill in distro without local web browser
+Authorize GoogleCalendarSkill in Mark1 without local web browser
 
-    From your command line go to third_party folder skill
+    open SSH session
 
-    cd /opt/mycroft/third_party
+    From your command line go to mycroft skills folder
 
-    python mycroft-googlecalendar-skill --noauth_local_webserver
+    cd  /opt/mycroft/skills
+    python GoogleCalendarSkill --noauth_local_webserver
 
 Open the generated link in computer with browser and wait the verification code and paste
 
      Enter verification code: 4/oxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   
 
 
+The installation process generates automatically the file ~/.mycroft/mycroft.conf and ~/.credentials/mycroft-googlecalendar-skill.json
 
-Restart Skills
 
-    ./start.sh skills
+Then copy the following files and fix the permissions
+
+     sudo mkdir /home/mycroft/.credentials
+     sudo cp /home/pi/.credentials/mycroft-googlecalendar-skill.json /home/mycroft/.credentials/mycroft-googlecalendar-skill.json
+     sudo chmod -R 777 /home/mycroft/.credentials
+
+     sudo cp /home/pi/.mycroft/mycroft.conf /home/mycroft/.mycroft/mycroft.conf
+     sudo chmod -R 777 /home/pi/.mycroft
+
+Edit your ~/.mycroft/mycroft.conf with sudo (sudo nano ~/.mycroft/mycroft.conf)
+on "GoogleCalendarSkill"  edit your options
+
+
+Restart Mycroft
+
+./stop-mycroft.sh
+
+./start-mycroft.sh debug
+
+
 
 ----------
-
 
 Features
 --------------------
@@ -108,8 +108,8 @@ Currently this skill can do the following things to get information from your ca
 - List my appointments until tomorrow
 - My compromises for the Sunday
 - Whats my events for the following 5 days
-- When is my appointment with gianluca (New)
-- Where is my next meeting (New)
+- when is my appointment with gianluca
+- Where is my next meeting
 
 
 > **Note:**
@@ -125,15 +125,15 @@ New Features: Add Events
 
 Currently this skill can do the following things to set events to your calendar (with some variation):
 
-- Add new event tomorrow from 2:30 pm to 4:45 pm Lunch with Gianluca on Olive Garden's
-- Set compromise today from 18:30 to 21:45 pm Dinner whit Gianluca after work
+- Add new event tomorrow from 2:30 pm to 4:45 pm Lunch with Gianluca on Olive Gardens
+- Set compromise today from 18:30 to 21:45 Dinner whit Gianluca after work
 - Add new appointment from 8:30 am to 11:45 am Marketing planification
 - Add new event friday from 11:30 am to 5:45 pm birthday party on carlos house
 
 - Schedule meeting on march 2 from 8:30 am to 11:45 am Support team planification
 - Schedule my meeting on october 25 from 8:30 am to 11:45 am Halloween party planification
 - Schedule family meeting on november 2 from 1:30 pm to 5:45 pm New years party planification
-- Schedule work meeting on november 13 from 13:30 to 16:45  Sales planification with customers
+- Schedule work meeting on january 13 from 13:30 to 16:45  Sales planification with customers
 - Schedule meeting on march 2 at 18:30 Visit Carlos at Hospital
 
 - Set event today at 7:45 pm Dinner with Gianluca
@@ -142,19 +142,12 @@ Currently this skill can do the following things to set events to your calendar 
 - Set event saturday at 11:30 PM New years party planification
 
 
-
 > **Note:**
 
 > - For add events, you have to use hours with fractions of 15 minutes (Like: 10:15 am , 15.45 , 20:30 )
 > - You can toggle key word with:
 > - Today, tomorrow, name of the day of the week , month and day
 > - Events, Events, Meeting, Mettings, Appointmen, Appointmens, Schedule, Scheduled, Compromise, Compromises
-
-
-Bonus Features: 
---------------------
-- When is the end of the world?
-- When is the judgment day ?
 
 
 
