@@ -206,7 +206,7 @@ def getDescription(word):
 		found = False
 	return found
 
-class GoogleCalendarSkill(MycroftSkill):
+class GoogleCalendar-Skill(MycroftSkill):
     """
     A Skill to check your google calendar
     also can add events
@@ -1232,4 +1232,4 @@ class GoogleCalendarSkill(MycroftSkill):
 
 
 def create_skill():
-    return GoogleCalendarSkill()
+    return GoogleCalendar-Skill()
